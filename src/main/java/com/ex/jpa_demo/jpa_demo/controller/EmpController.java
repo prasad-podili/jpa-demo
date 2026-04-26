@@ -56,7 +56,7 @@ public class EmpController {
 
     @DeleteMapping
     public ResponseEntity<Void> deleteAll(){
-        System.out.println("Deleted all Employees");
+        System.out.println("Deleted all Employees for fun");
         return ResponseEntity.noContent().build();
     }
 
