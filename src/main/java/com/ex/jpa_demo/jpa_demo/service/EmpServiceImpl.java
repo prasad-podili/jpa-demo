@@ -16,16 +16,19 @@ public class EmpServiceImpl {
 
     public Employee addEmployee(Employee employee){
         Employee saved = empRepo.save(employee);
+        System.out.println("Employee Added");
         return saved;
     }
 
     public Employee getById(Long id){
+        System.out.println("Getting Employee by Id");
         return empRepo.findById(id)
                 .orElse(new Employee(0L,"---",0.0));
     }
 
     public Page<Employee> getAll(int page, int size){
         Pageable pageable = PageRequest.of(page, size, Sort.by("name").ascending());
+        System.out.println("Employee Getting");
         return empRepo.findAll(pageable);
     }
 
