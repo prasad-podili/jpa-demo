@@ -47,4 +47,9 @@ public class EmpController {
         Page<Employee> empList = service.getAll(page,size);
         return ResponseEntity.ok(empList);
     }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteById(@PathVariable("id") Long id){
+        return ResponseEntity.noContent().build();
+    }
 }
