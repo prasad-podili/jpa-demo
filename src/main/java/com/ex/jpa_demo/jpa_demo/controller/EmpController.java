@@ -53,4 +53,9 @@ public class EmpController {
         System.out.println("Deleting Employee by ID");
         return ResponseEntity.noContent().build();
     }
+
+    @DeleteMapping
+    public ResponseEntity<Void> deleteAll(){
+        return ResponseEntity.noContent().build();
+    }
 }
