@@ -1,0 +1,11 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-employee-index
+      author: prasad
+      changes:
+        - createIndex:
+            tableName: employees
+            indexName: idx_employee_salary
+            columns:
+              - column:
+                  name: salary
